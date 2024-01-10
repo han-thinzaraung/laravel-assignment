@@ -17,7 +17,7 @@
                     
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Roll No.</th>
                             <th scope="col">Registration No.</th>
@@ -30,7 +30,7 @@
                            
                             @foreach ($sstudents as $sstudent)
                             <tr>
-                                <th scope="row">{{ $sstudent->id }}</th>
+                                <th scope="row">{{ $loop->index + 1 }}</th>
                                 <td>{{ $sstudent->name }}</td>
                                 <td>{{ $sstudent->roll_no }}</td>
                                 <td>{{ $sstudent->registration_no }}</td>

@@ -10,7 +10,7 @@
                     <table class="table">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">ID</th> --}}
                             <th scope="col">Name</th>
                             <th scope="col">Roll No.</th>
                             <th scope="col">Registration No.</th>
@@ -20,7 +20,7 @@
                         </thead>
                         <tbody>   
                             <tr>
-                                <th scope="row">{{ $sstudent->id }}</th>
+                                {{-- <th scope="row">1</th> --}}
                                 <td>{{ $sstudent->name }}</td>
                                 <td>{{ $sstudent->roll_no }}</td>
                                 <td>{{ $sstudent->registration_no }}</td>

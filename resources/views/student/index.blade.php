@@ -17,7 +17,7 @@
                     
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Ph No.</th>
@@ -29,7 +29,7 @@
                            
                             @foreach ($students as $student)
                             <tr>
-                                <th scope="row">{{ $student->id }}</th>
+                                <th scope="row">{{ $loop->index + 1 }}</th>
                                 <td>{{ $student->name }}</td>
                                 <td>{{ $student->email }}</td>
                                 <td>{{ $student->ph_no }}</td>
