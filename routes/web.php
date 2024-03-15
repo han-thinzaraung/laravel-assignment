@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemController;
 use GuzzleHttp\Middleware;
 use App\Policies\StudentPolicy;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,8 @@ Route::put('sstudent/{sstudent}', [SstudentController::class, 'update'])->name('
 Route::get('sstudent/{sstudent}', [SstudentController::class, 'show'])->name('sstudent.show');
 Route::delete('sstudent/{sstudent}', [SstudentController::class, 'destroy'])->name('sstudent.destroy');
 });
+
+
 
 
 

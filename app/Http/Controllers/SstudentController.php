@@ -58,8 +58,9 @@ class SstudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Sstudent $sstudent)
+    public function show($id)
     {
+        $sstudent = Sstudent::findOrFail($id);
         return view('sstudent.detail', compact('sstudent'));
     }
     /**
@@ -68,8 +69,9 @@ class SstudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sstudent $sstudent)
+    public function edit($id)
     {
+        $sstudent = Sstudent::findOrFail($id);
         return view('sstudent.edit',compact('sstudent'));
     }
 
@@ -80,8 +82,9 @@ class SstudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSstudentRequest $request, Sstudent $sstudent)
+    public function update(UpdateSstudentRequest $request, $id)
     {
+        $sstudent = Sstudent::findOrFail($id);
         $sstudent->name = $request->name;
         $sstudent->roll_no = $request->roll_no;
         $sstudent->registration_no = $request->registration_no;
@@ -98,8 +101,9 @@ class SstudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sstudent $sstudent)
+    public function destroy($id)
     {
+        $sstudent = Sstudent::findOrFail($id);
         if($sstudent){
             $sstudent->delete();
         }

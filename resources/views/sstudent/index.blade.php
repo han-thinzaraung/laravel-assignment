@@ -30,7 +30,7 @@
                            
                             @foreach ($sstudents as $sstudent)
                             <tr>
-                                <th scope="row">{{ $loop->index + 1 }}</th>
+                                <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $sstudent->name }}</td>
                                 <td>{{ $sstudent->roll_no }}</td>
                                 <td>{{ $sstudent->registration_no }}</td>
